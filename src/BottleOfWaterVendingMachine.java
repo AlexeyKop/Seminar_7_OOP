@@ -1,3 +1,5 @@
+package Seminar_7_OOP.src;
+
 import java.util.List;
 
 public class BottleOfWaterVendingMachine implements VendingMachine{

@@ -1,19 +1,21 @@
+package Seminar_7_OOP.src;
+
 import java.util.List;
 
 public abstract class Product {
-    private String name;
-    private double cost;
+    private String name;    // наименование товара
+    private double cost;    // стоимость товара
 
-    public Product(String name, double cost) {
+    public Product(String name, double cost) {  // конструктор класса Product (всегда public)
         this.name = name;
         this.cost = cost;
     }
 
-    public String getName() {
+    public String getName() {   // получить (читать) Name
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name) {  // установить (принять, записать) Name
         this.name = name;
     }
 

@@ -1,4 +1,7 @@
+package Seminar_7_OOP.src;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,6 +22,27 @@ public class Main {
 //        for (BottleOfWatter b : vendingMachine.getBottleOfWatters()) {
 //            System.out.println(b);
 //        }
+
+        List<HotDrink> hotDrinks = new ArrayList<>();
+        hotDrinks.add(new HotDrink("Чай" , 50, 150, 80));
+        hotDrinks.add(new HotDrink("Кофе", 60,75, 90));
+        hotDrinks.add(new HotDrink("Какао", 70, 100,70));
+
+        HotDrinkVendingMachine machine = new HotDrinkVendingMachine(hotDrinks);
+
+        // Получение напитка по имени
+        HotDrink drinkByName = (HotDrink) machine.getProduct("Чай");
+        System.out.println(drinkByName);
+
+        // Получение напитка по имени и объему
+        HotDrink drinkByNameAndVolume = (HotDrink) machine.getProduct("Кофе", 75);
+        System.out.println(drinkByNameAndVolume);
+
+        // Получение напитка по имени, объему и температуре
+        HotDrink drinkByNameVolumeAndTemperature = (HotDrink) machine.getProduct("Какао", 100, 70);
+        System.out.println(drinkByNameVolumeAndTemperature);
+
+
     }
 
 }
